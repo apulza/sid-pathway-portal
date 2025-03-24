@@ -1,6 +1,7 @@
 
 import { useRef, useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
+import { Linkedin, Instagram } from 'lucide-react';
 
 const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
@@ -84,6 +85,41 @@ const Contact = () => {
                 <div>
                   <h4 className="text-sm font-medium">Phone</h4>
                   <p className="text-muted-foreground">+1 (959) 333 0354</p>
+                </div>
+              </div>
+              
+              {/* Social Media Links */}
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full">
+                  <Linkedin className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <h4 className="text-sm font-medium">LinkedIn</h4>
+                  <a 
+                    href="https://www.linkedin.com/in/siddharth-patel-3ab2772b8/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    linkedin.com/in/siddharth-patel
+                  </a>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full">
+                  <Instagram className="h-5 w-5 text-primary" />
+                </div>
+                <div>
+                  <h4 className="text-sm font-medium">Instagram</h4>
+                  <a 
+                    href="https://www.instagram.com/s1dpat3l/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    instagram.com/s1dpat3l
+                  </a>
                 </div>
               </div>
             </div>
