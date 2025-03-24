@@ -46,7 +46,11 @@ const Hero = () => {
               <div className="absolute top-0 left-0 right-0 bottom-0 bg-primary/10 rounded-2xl transform rotate-6 -z-10"></div>
               <div className="glass rounded-2xl p-1 shadow-xl">
                 <div className="aspect-square rounded-xl bg-secondary flex items-center justify-center overflow-hidden">
-                  <div className="text-6xl">👨‍💻</div>
+                  <img 
+                    src="/lovable-uploads/5e8b9a93-4f9e-4326-9609-6e7598c629f4.png" 
+                    alt="Siddharth Patel"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </div>
