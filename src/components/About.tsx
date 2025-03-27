@@ -17,19 +17,19 @@ const About = () => {
           
           <div className="appear-on-scroll from-right">
             <h4 className="text-primary font-medium mb-2">About Me</h4>
-            <h2 className="section-heading mb-6">Crafting Digital Experiences</h2>
+            <h2 className="section-heading mb-6">Computer Science Student</h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                I'm a full stack developer with a passion for creating clean, efficient, and user-friendly web applications.
-                My journey in tech has equipped me with a strong foundation in both front-end and back-end technologies.
+                I'm a Computer Science student at Northeastern University's Khoury College of Computer Sciences,
+                with a concentration in Artificial Intelligence and a minor in Business Administration.
               </p>
               <p>
-                I specialize in building responsive web applications with modern JavaScript frameworks, creating RESTful APIs,
-                and implementing clean, maintainable code that follows best practices.
+                My academic journey has equipped me with strong foundations in various programming languages
+                and technologies, from Java and Python to AI/ML concepts and web development.
               </p>
               <p>
-                When I'm not coding, you can find me exploring new technologies, contributing to open-source projects,
-                or sharing my knowledge with the developer community.
+                I'm passionate about applying AI to solve real-world problems, as demonstrated by my research
+                experience at Northeastern's AI Perception Lab and through my various projects.
               </p>
             </div>
           </div>

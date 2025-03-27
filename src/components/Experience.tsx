@@ -2,33 +2,49 @@
 const Experience = () => {
   const experiences = [
     {
-      title: "Senior Developer",
-      company: "TechCorp Inc.",
-      period: "2021 - Present",
-      description: "Led development of multiple web applications, mentored junior developers, and implemented CI/CD pipelines."
+      title: "AI Research Assistant",
+      company: "Northeastern University AI Perception Lab",
+      location: "Boston, MA",
+      period: "Jan 2025 – Present",
+      description: [
+        "Working on semantic segmentation, causal inference, and knowledge graphs to improve object differentiation and contextual understanding.",
+        "Developing AI models that incorporate uncertainty estimation and reasoning to handle ambiguity and incomplete information in conversational AI.",
+        "Gaining hands on experience in AI/ML techniques, including deep learning/neural networks, data preprocessing, regression/classification, and Python."
+      ]
     },
     {
-      title: "Full Stack Developer",
-      company: "InnovateSoft",
-      period: "2018 - 2021",
-      description: "Developed and maintained various client projects using React, Node.js, and MongoDB."
+      title: "Mathematics Teaching Assistant",
+      company: "Northeastern University College of Science",
+      location: "Boston, MA",
+      period: "Aug 2024 – Dec 2024",
+      description: [
+        "Fostered a deeper understanding of complex mathematical concepts and provided constructive feedback to students to enhance their learning experience in MATH 1341 (Calculus 1 for Science and Engineering)."
+      ]
     },
     {
-      title: "Frontend Developer",
-      company: "WebSolutions",
-      period: "2016 - 2018",
-      description: "Built responsive interfaces with JavaScript, HTML, and CSS, collaborating closely with designers."
+      title: "Cashier and Service Clerk",
+      company: "Big Y Foods, Inc.",
+      location: "Rocky Hill, CT",
+      period: "Aug 2023 – Present",
+      description: [
+        "Providing excellent customer service, efficiently processing transactions, managing cart retrieval, maintaining a clean and organized workplace, and contributing to a positive and safe shopping experience."
+      ]
     },
     {
-      title: "Junior Developer",
-      company: "CodeMasters",
-      period: "2014 - 2016",
-      description: "Started my journey working on web development projects and learning fundamental programming concepts."
+      title: "AI Scholar",
+      company: "Inspirit AI",
+      location: "Remote",
+      period: "Jul 2023 – Aug 2023",
+      description: [
+        "Created a computer vision system to help diagnose pneumonia from chest X-rays with a group of interns and mentors.",
+        "Reviewed neural networks and created convolutional neural networks in Keras to process medical images.",
+        "Evaluated the model on field data, and learned to create artificial data using image transformations so that the model performs well on real-life data."
+      ]
     }
   ];
 
   return (
-    <section id="experience" className="bg-secondary/50">
+    <section id="experience" className="bg-white">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h4 className="text-primary font-medium mb-2">Professional Journey</h4>
@@ -60,8 +76,16 @@ const Experience = () => {
                   <div className="pl-12 md:pl-0">
                     <h3 className="text-xl font-medium">{exp.title}</h3>
                     <p className="text-primary font-medium">{exp.company}</p>
+                    <p className="text-sm text-muted-foreground">{exp.location}</p>
                     <p className="text-sm text-muted-foreground mb-2">{exp.period}</p>
-                    <p className="text-muted-foreground">{exp.description}</p>
+                    <ul className="text-muted-foreground space-y-2">
+                      {exp.description.map((item, i) => (
+                        <li key={i} className="flex items-start gap-2">
+                          <span className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5"></span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               </div>

@@ -14,13 +14,13 @@ const Hero = () => {
         <div className="grid md:grid-cols-2 gap-10 md:gap-20 items-center">
           <div className="appear-on-scroll from-left">
             <div className="inline-block mb-3 px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full">
-              Full Stack Developer
+              Computer Science Student
             </div>
             <h1 className="mb-6">
               Hi, I'm Siddharth Patel
             </h1>
             <p className="mb-8 text-lg text-muted-foreground max-w-lg">
-              A passionate developer creating elegant and functional web experiences with modern technologies.
+              A passionate computer science student with a concentration in AI, creating innovative solutions and exploring new technologies.
             </p>
             <div className="flex flex-wrap gap-4">
               <button

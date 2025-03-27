@@ -101,23 +101,15 @@ const Skills = () => {
     }
   ];
   
-  // Original skills data (kept for reference)
+  // Skills categories
   const skills = [
     {
-      category: "Frontend",
-      items: ["JavaScript", "React", "TypeScript", "HTML/CSS", "Tailwind CSS"]
+      category: "Programming Languages",
+      items: ["Java", "JavaScript", "Python", "C", "C++", "HTML/CSS", "SQL", "Racket"]
     },
     {
-      category: "Backend",
-      items: ["Node.js", "Express", "Python", "RESTful APIs", "GraphQL"]
-    },
-    {
-      category: "Database",
-      items: ["MongoDB", "PostgreSQL", "MySQL", "Firebase"]
-    },
-    {
-      category: "Tools & Others",
-      items: ["Git", "Docker", "CI/CD", "AWS", "Agile/Scrum"]
+      category: "Tools & Applications",
+      items: ["Git", "Github", "Google Colab", "Jupyter Notebook", "IntelliJ", "Eclipse", "VS-Code", "Linux", "LaTeX"]
     }
   ];
 
@@ -196,8 +188,8 @@ const Skills = () => {
           </div>
         </div>
         
-        {/* Category breakdown - kept from original design */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+        {/* Category breakdown */}
+        <div className="grid md:grid-cols-2 gap-6 mt-16">
           {skills.map((skillSet, index) => (
             <div 
               key={skillSet.category}
