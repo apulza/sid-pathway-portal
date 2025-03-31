@@ -1,19 +1,19 @@
 
-import { Bike, Dumbbell, Plane, Gamepad, Mountain, GolfClub, BallTennis } from "lucide-react";
+import { Bike, Dumbbell, Plane, Gamepad } from "lucide-react";
 
 const Interests = () => {
   const interests = [
     {
       name: "Hiking",
-      icon: <Mountain className="h-6 w-6" />
+      icon: <Bike className="h-6 w-6" />
     },
     {
       name: "Golf",
-      icon: <GolfClub className="h-6 w-6" />
+      icon: <Dumbbell className="h-6 w-6 rotate-45" /> // Using Dumbbell as a substitute for golf club
     },
     {
       name: "Tennis",
-      icon: <BallTennis className="h-6 w-6" />
+      icon: <Bike className="h-6 w-6 rotate-90" /> // Using Bike as a substitute for tennis racket
     },
     {
       name: "Fitness",
