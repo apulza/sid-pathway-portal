@@ -1,4 +1,5 @@
-import { Mountain, Golf, TennisBall, Dumbbell, Plane, Gamepad } from "lucide-react";
+
+import { Bike, Dumbbell, Plane, Gamepad, Mountain, GolfClub, BallTennis } from "lucide-react";
 
 const Interests = () => {
   const interests = [
@@ -8,11 +9,11 @@ const Interests = () => {
     },
     {
       name: "Golf",
-      icon: <Golf className="h-6 w-6" />
+      icon: <GolfClub className="h-6 w-6" />
     },
     {
       name: "Tennis",
-      icon: <TennisBall className="h-6 w-6" />
+      icon: <BallTennis className="h-6 w-6" />
     },
     {
       name: "Fitness",
