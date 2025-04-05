@@ -24,7 +24,7 @@ const About = () => {
                 with a concentration in Artificial Intelligence and a minor in Business Administration.
               </p>
               <p>
-                My academic journey has equipped me with strong foundations in various programming languages
+                My academic journey has provided me with strong foundations in various programming languages
                 and technologies, from Java and Python to AI/ML concepts and web development.
               </p>
               <p>
