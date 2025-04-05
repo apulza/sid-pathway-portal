@@ -1,4 +1,3 @@
-
 import { Mountain, LandPlot, MapPinXInside, Gamepad2, Dumbbell, Plane } from "lucide-react";
 
 const Interests = () => {
