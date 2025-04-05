@@ -1,4 +1,5 @@
-import { Mountain, LandPlot, MapPinXInside, Gamepad2 } from "lucide-react";
+
+import { Mountain, LandPlot, MapPinXInside, Gamepad2, Dumbbell, Plane } from "lucide-react";
 
 const Interests = () => {
   const interests = [
