@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  base: "/sid-pathway-portal/", // Add this line for GitHub Pages deployment
+  base: "/sid-pathway-portal/", // Base path for GitHub Pages
   plugins: [
     react(),
     mode === 'development' &&
@@ -21,4 +21,9 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    outDir: "dist",
+    assetsDir: "assets",
+    sourcemap: true,
+  }
 }));
