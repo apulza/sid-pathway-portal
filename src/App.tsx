@@ -13,10 +13,19 @@ const App = () => {
   console.log("App component rendering");
   
   return (
-    <div style={{ padding: '20px', fontSize: '18px' }}>
-      <h1>App is working!</h1>
-      <p>If you can see this, React is loading correctly.</p>
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <HashRouter>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </HashRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
   );
 };
 
