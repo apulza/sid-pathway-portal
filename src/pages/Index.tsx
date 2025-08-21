@@ -11,12 +11,9 @@ import Interests from '@/components/Interests';
 import Contact from '@/components/Contact';
 
 const Index = () => {
-  console.log("Index component rendering");
-  
   // Update document title
   useEffect(() => {
     document.title = 'Siddharth Patel | Computer Science Student';
-    console.log("Document title updated");
   }, []);
 
   return (
