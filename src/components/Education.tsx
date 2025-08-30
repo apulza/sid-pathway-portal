@@ -25,9 +25,9 @@ const Education = () => {
                 
                 <div className="space-y-3">
                   <div>
-                    <h4 className="font-medium flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
-                      GPA: 3.54/4.0
+                    <h4 >
+                      <span ></span>
+                      
                     </h4>
                   </div>
                   
@@ -37,9 +37,8 @@ const Education = () => {
                       Courses
                     </h4>
                     <p className="ml-4 text-muted-foreground">
-                      Discrete Structures, Foundations of Computer Science 1 and 2, Foundations of Cybersecurity, 
-                      Foundations of Data Science, Object Oriented Design, Programming in C++, 
-                      Digital Design and Computer Architecture
+                    Discrete Structures, Foundations of Computer Science 1 and 2, Foundations of Cybersecurity, Foundations
+                    of Data Science, Introduction to Databases, Object Oriented Design, Programming in C++, Theory of Computation
                     </p>
                   </div>
                   

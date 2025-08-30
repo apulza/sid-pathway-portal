@@ -38,7 +38,7 @@ const Navbar = () => {
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
           >
-            <span className="text-primary">S</span>iddharth<span className="text-primary">.</span>
+            <span className="text-primary">S</span>iddharth
           </a>
         </div>
         

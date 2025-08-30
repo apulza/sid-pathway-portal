@@ -1,6 +1,4 @@
 
-import { CodeSquare, Terminal } from "lucide-react";
-
 const Projects = () => {
   const projects = [
     {
@@ -33,15 +31,10 @@ const Projects = () => {
               style={{ transitionDelay: `${index * 150}ms` }}
             >
               <div className="bg-card hover:shadow-lg hover:-translate-y-1 transition-all duration-300 rounded-xl p-6 h-full border border-border/50">
-                <div className="flex items-start gap-4">
-                  <div className="text-primary mt-1">
-                    {index % 2 === 0 ? <CodeSquare className="h-6 w-6" /> : <Terminal className="h-6 w-6" />}
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-medium">{project.title}</h3>
-                    <p className="text-sm text-primary mb-3">{project.period}</p>
-                    <p className="text-muted-foreground">{project.description}</p>
-                  </div>
+                <div>
+                  <h3 className="text-xl font-medium">{project.title}</h3>
+                  <p className="text-sm text-primary mb-3">{project.period}</p>
+                  <p className="text-muted-foreground">{project.description}</p>
                 </div>
               </div>
             </div>

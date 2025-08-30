@@ -47,7 +47,7 @@ const Hero = () => {
               <div className="glass rounded-2xl p-1 shadow-xl">
                 <div className="aspect-square rounded-xl bg-secondary flex items-center justify-center overflow-hidden">
                   <img 
-                    src="/lovable-uploads/5e8b9a93-4f9e-4326-9609-6e7598c629f4.png" 
+                    src="/siddharth-africa.jpg" 
                     alt="Siddharth Patel"
                     className="w-full h-full object-cover"
                   />

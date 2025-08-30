@@ -1,15 +1,34 @@
 
+import React from 'react';
+
 const Experience = () => {
   const experiences = [
+    {
+      title: "Resident Assistant",
+      company: "Northeastern University Housing and Residential Life",
+      location: "Boston, MA",
+      period: "Aug 2025 – Present"
+    },
+    {
+      title: "Coding Instructor",
+      company: "theCoderSchool",
+      location: "Cheshire, CT",
+      period: "April 2025 – Aug 2025",
+      description: [
+        "Instructed 10-15 students a week in programming fundamentals using Python, Java, JavaScript, C#, HTML/CSS, and Scratch.",
+        "Developed engaging coding lessons/projects tailored for different skill levels, resulting in positive student feedback scores.",
+        "Allowed students to develop problem-solving and critical thinking skills, enabling them to independently debug and approach coding challenges."
+      ]
+    },
     {
       title: "AI Research Assistant",
       company: "Northeastern University AI Perception Lab",
       location: "Boston, MA",
-      period: "Jan 2025 – Present",
+      period: "Jan 2025 – April 2025",
       description: [
-        "Working on semantic segmentation, causal inference, and knowledge graphs to improve object differentiation and contextual understanding.",
-        "Developing AI models that incorporate uncertainty estimation and reasoning to handle ambiguity and incomplete information in conversational AI.",
-        "Gaining hands on experience in AI/ML techniques, including deep learning/neural networks, data preprocessing, regression/classification, and Python."
+        "Worked on semantic segmentation, causal inference, and knowledge graphs to improve object differentiation and contextual understanding.",
+        "Developed AI models that incorporate uncertainty estimation and reasoning to handle ambiguity and incomplete information in conversational AI.",
+        "Gained hands on experience in AI/ML techniques, including deep learning/neural networks, data preprocessing, regression/classification, and Python."
       ]
     },
     {
@@ -25,20 +44,9 @@ const Experience = () => {
       title: "Cashier and Service Clerk",
       company: "Big Y Foods, Inc.",
       location: "Rocky Hill, CT",
-      period: "Aug 2023 – Present",
+      period: "Aug 2023 – Aug 2025",
       description: [
-        "Providing excellent customer service, efficiently processing transactions, managing cart retrieval, maintaining a clean and organized workplace, and contributing to a positive and safe shopping experience."
-      ]
-    },
-    {
-      title: "AI Scholar",
-      company: "Inspirit AI",
-      location: "Remote",
-      period: "Jul 2023 – Aug 2023",
-      description: [
-        "Created a computer vision system to help diagnose pneumonia from chest X-rays with a group of interns and mentors.",
-        "Reviewed neural networks and created convolutional neural networks in Keras to process medical images.",
-        "Evaluated the model on field data, and learned to create artificial data using image transformations so that the model performs well on real-life data."
+        "Provided excellent customer service, efficiently processed transactions, managed cart retrieval, maintained a clean and organized workplace, and contributed to a positive and safe shopping experience."
       ]
     }
   ];
@@ -78,14 +86,15 @@ const Experience = () => {
                     <p className="text-primary font-medium">{exp.company}</p>
                     <p className="text-sm text-muted-foreground">{exp.location}</p>
                     <p className="text-sm text-muted-foreground mb-2">{exp.period}</p>
-                    <ul className="text-muted-foreground space-y-2">
-                      {exp.description.map((item, i) => (
-                        <li key={i} className="flex items-start gap-2">
-                          <span className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5"></span>
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    {exp.description && (
+                      <ul className="text-muted-foreground space-y-2 list-disc pl-5">
+                        {exp.description.map((item, i) => (
+                          <li key={i}>
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
                 </div>
               </div>
