@@ -3,7 +3,7 @@ import { scrollTo } from '@/utils/animations';
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center relative pt-20">
+    <section className="py-20 flex items-start relative">
       {/* Background shapes */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute top-20 right-[10%] w-64 h-64 rounded-full bg-primary/5 blur-3xl"></div>
@@ -45,7 +45,7 @@ const Hero = () => {
             <div className="relative">
               <div className="absolute top-0 left-0 right-0 bottom-0 bg-primary/10 rounded-2xl transform rotate-6 -z-10"></div>
               <div className="glass rounded-2xl p-1 shadow-xl">
-                <div className="aspect-square rounded-xl bg-secondary flex items-center justify-center overflow-hidden">
+                <div className="aspect-[4/5] rounded-xl bg-secondary flex items-center justify-center overflow-hidden">
                   <img 
                     src="./siddharth-africa-new.jpg" 
                     alt="Siddharth Patel"

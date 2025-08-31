@@ -1,0 +1,10 @@
+[33m395f9fe[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Add comprehensive security measures and fix vulnerabilities
+[33m050b1aa[m Fix image loading issue and add error handling for Hero image
+[33ma3cc63b[m Update portfolio with new image, experiences, and UI improvements
+[33mb666773[m Reverted to commit eecd3c044c1fedc3468c7323bf8dbffca6e74b15
+[33ma518e8a[m Fix: Image not showing
+[33m215cc85[m Fix: Images not displaying
+[33m36fcf99[m Fix: Ensure content renders on page
+[33meecd3c0[m Fix: Change BrowserRouter to HashRouter for GitHub Pages compatibility
+[33m3d920ad[m Manual trigger for GitHub Pages
+[33mb699d93[m Trigger GitHub Pages deployment
