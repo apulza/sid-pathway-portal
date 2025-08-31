@@ -47,7 +47,7 @@ const Hero = () => {
               <div className="glass rounded-2xl p-1 shadow-xl">
                 <div className="aspect-square rounded-xl bg-secondary flex items-center justify-center overflow-hidden">
                   <img 
-                    src="/siddharth-africa-new.jpg" 
+                    src="./siddharth-africa-new.jpg" 
                     alt="Siddharth Patel"
                     className="w-full h-full object-cover"
                     onError={(e) => {
