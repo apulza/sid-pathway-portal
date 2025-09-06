@@ -47,12 +47,13 @@ const Hero = () => {
               <div className="glass rounded-2xl p-1 shadow-xl">
                 <div className="aspect-[4/5] rounded-xl bg-secondary flex items-center justify-center overflow-hidden">
                   <img 
-                    src="./siddharth-africa-new.jpg" 
+                    src="/siddharth-africa-new.jpg" 
                     alt="Siddharth Patel"
                     className="w-full h-full object-cover"
                     onError={(e) => {
                       console.error('Image failed to load:', e);
-                      e.target.style.display = 'none';
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
                     }}
                     onLoad={() => console.log('Image loaded successfully')}
                   />
