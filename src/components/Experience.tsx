@@ -13,7 +13,7 @@ const Experience = () => {
       title: "Coding Instructor",
       company: "theCoderSchool",
       location: "Cheshire, CT",
-      period: "April 2025 – Aug 2025",
+      period: "Apr 2025 – Aug 2025",
       description: [
         "Instructed 10-15 students a week in programming fundamentals using Python, Java, JavaScript, C#, HTML/CSS, and Scratch.",
         "Developed engaging coding lessons/projects tailored for different skill levels, resulting in positive student feedback scores.",
@@ -24,7 +24,7 @@ const Experience = () => {
       title: "AI Research Assistant",
       company: "Northeastern University AI Perception Lab",
       location: "Boston, MA",
-      period: "Jan 2025 – April 2025",
+      period: "Jan 2025 – Apr 2025",
       description: [
         "Worked on semantic segmentation, causal inference, and knowledge graphs to improve object differentiation and contextual understanding.",
         "Developed AI models that incorporate uncertainty estimation and reasoning to handle ambiguity and incomplete information in conversational AI.",

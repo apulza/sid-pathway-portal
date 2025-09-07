@@ -8,7 +8,7 @@ const Projects = () => {
     },
     {
       title: "Swarmscape",
-      period: "Jan 2025 - Present",
+      period: "Jan 2025 - Apr 2025",
       description: "Developed an AI-powered greenhouse using swarm robotics and Google's Vertex AI. The robots record data around the greenhouse using sensors and monitor the environment 24/7. AI is used to analyze the environmental data gathered by the robots to make decisions related to pest control, diseases, and crop yield."
     }
   ];
