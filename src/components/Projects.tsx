@@ -3,7 +3,7 @@ const Projects = () => {
   const projects = [
     {
       title: "Problem Reporting and Solution Tracking App",
-      period: "Feb 2025 - March 2025",
+      period: "Feb 2025 - Mar 2025",
       description: "Developed an AI-powered community-engagement platform designed to bridge the gap between residents and community leaders. The platform leverages AI from sentiment analysis to keyword extraction, and offers data-driven insights based on retrieval augmented generation (RAG)."
     },
     {
