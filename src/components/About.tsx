@@ -8,8 +8,12 @@ const About = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-primary/10 rounded-2xl transform -rotate-6 -z-10"></div>
               <div className="glass rounded-2xl p-1 shadow-xl">
-                <div className="aspect-video rounded-xl bg-white flex items-center justify-center overflow-hidden">
-                  <div className="text-4xl">🚀</div>
+                <div className="rounded-xl bg-white overflow-hidden">
+                  <img
+                    src="/sidcruisepic.png" 
+                    alt="About me"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </div>
