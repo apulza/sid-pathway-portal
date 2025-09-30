@@ -101,6 +101,10 @@
     @apply py-20 md:py-28 px-6 sm:px-10 overflow-hidden;
   }
 
+  section:first-of-type {
+    @apply pt-6 md:pt-8 pb-12 md:pb-16 px-6 sm:px-10 overflow-hidden;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-display font-medium tracking-tight;
   }
