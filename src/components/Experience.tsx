@@ -64,7 +64,7 @@ const Experience = () => {
             {experiences.map((exp, index) => (
               <div 
                 key={index}
-                className={`mb-12 relative flex flex-col md:grid md:grid-cols-2 items-center appear-on-scroll`}
+                className="mb-12 relative grid grid-cols-2 items-center appear-on-scroll"
                 style={{ transitionDelay: `${index * 150}ms` }}
               >
                 {/* Timeline Dot */}
