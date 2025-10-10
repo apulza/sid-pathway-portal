@@ -1,7 +1,7 @@
 
 const About = () => {
   return (
-    <section id="about" className="bg-secondary/50">
+  <section id="about" className="bg-secondary/50 py-10">
       <div className="container mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="appear-on-scroll from-left">

@@ -7,7 +7,7 @@ const Contact = () => {
   // ...existing code...
 
   return (
-    <section id="contact">
+  <section id="contact" className="py-10">
       <div className="container mx-auto">
         <div className="grid md:grid-cols-2 gap-16">
           <div className="appear-on-scroll from-left">

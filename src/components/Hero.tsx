@@ -1,9 +1,56 @@
 
 import { scrollTo } from '@/utils/animations';
+import { useEffect, useState } from 'react';
 
 const Hero = () => {
+  const phrases = [
+  "Hi, I'm Sid Patel",
+  "Innovative",
+  "Creative",
+  "Passionate",
+  "Problem-solver",
+  "Detail-oriented"
+  ];
+  const [currentPhrase, setCurrentPhrase] = useState(0);
+  const [displayedText, setDisplayedText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [showCursor, setShowCursor] = useState(true);
+
+  useEffect(() => {
+    let typingSpeed = isDeleting ? 50 : 100;
+    let timeout: NodeJS.Timeout;
+    let cursorInterval: NodeJS.Timeout | null = null;
+
+    const handleTyping = () => {
+      const fullText = phrases[currentPhrase];
+      if (!isDeleting && displayedText.length < fullText.length) {
+        setDisplayedText(fullText.substring(0, displayedText.length + 1));
+        timeout = setTimeout(handleTyping, typingSpeed);
+      } else if (isDeleting && displayedText.length > 0) {
+        setDisplayedText(fullText.substring(0, displayedText.length - 1));
+        timeout = setTimeout(handleTyping, typingSpeed);
+      } else if (!isDeleting && displayedText.length === fullText.length) {
+        // Pause before deleting
+        timeout = setTimeout(() => setIsDeleting(true), 1200);
+      } else if (isDeleting && displayedText.length === 0) {
+        setIsDeleting(false);
+        setCurrentPhrase((prev) => (prev + 1) % phrases.length);
+        timeout = setTimeout(handleTyping, 500);
+      }
+    };
+
+    timeout = setTimeout(handleTyping, typingSpeed);
+    cursorInterval = setInterval(() => {
+      setShowCursor((prev) => !prev);
+    }, 500);
+
+    return () => {
+      clearTimeout(timeout);
+      if (cursorInterval) clearInterval(cursorInterval);
+    };
+  }, [displayedText, isDeleting, currentPhrase]);
   return (
-    <section className="py-20 flex items-start relative">
+    <section className="py-10 flex items-start relative">
       {/* Background shapes */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute top-20 right-[10%] w-64 h-64 rounded-full bg-primary/5 blur-3xl"></div>
@@ -13,11 +60,9 @@ const Hero = () => {
       <div className="container mx-auto">
         <div className="grid md:grid-cols-2 gap-10 md:gap-20 items-center">
           <div className="appear-on-scroll from-left">
-            <div className="inline-block mb-3 px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full">
-              Computer Science Student
-            </div>
             <h1 className="mb-6">
-              Hi, I'm Siddharth Patel
+              <span>{displayedText}</span>
+              <span className="inline-block w-2" style={{ color: showCursor ? '#000' : 'transparent' }}>|</span>
             </h1>
             <p className="mb-8 text-lg text-muted-foreground max-w-lg">
               A passionate computer science student with a concentration in AI, creating innovative solutions and exploring new technologies.
@@ -45,9 +90,9 @@ const Hero = () => {
             <div className="relative">
               <div className="absolute top-0 left-0 right-0 bottom-0 bg-primary/10 rounded-2xl transform rotate-6 -z-10"></div>
               <div className="glass rounded-2xl p-1 shadow-xl">
-                <div className="aspect-[4/5] rounded-xl bg-secondary flex items-center justify-center overflow-hidden">
-                  <img 
-                    src="/siddharth-africa-new.jpg" 
+                <div className="rounded-xl bg-white overflow-hidden w-full h-full">
+                  <img
+                    src="/siddharth-africa-new.jpg"
                     alt="Siddharth Patel"
                     className="w-full h-full object-cover"
                     onError={(e) => {

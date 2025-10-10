@@ -23,7 +23,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects">
+  <section id="projects" className="py-10">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h4 className="text-primary font-medium mb-2 appear-on-scroll from-bottom">My Work</h4>
