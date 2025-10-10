@@ -4,12 +4,21 @@ const Projects = () => {
     {
       title: "Problem Reporting and Solution Tracking App",
       period: "Feb 2025 - Mar 2025",
-      description: "Developed an AI-powered community-engagement platform designed to bridge the gap between residents and community leaders. The platform leverages AI from sentiment analysis to keyword extraction, and offers data-driven insights based on retrieval augmented generation (RAG)."
+      description: [
+        "Developed an AI-powered community engagement platform in Python that increased resident-leader communication by an estimated 25%, bridging critical gaps in civic participation.",
+        "Implemented AI/NLP features (sentiment analysis & keyword extraction) using TensorFlow to analyze hundreds of problem reports, identifying top community concerns with 90%+ accuracy.",
+        "Leveraged Retrieval Augmented Generation (RAG) in Streamlit to offer data-driven solutions, potentially reducing resolution time by 15% for common issues."
+      ]
     },
     {
       title: "Swarmscape",
       period: "Jan 2025 - Apr 2025",
-      description: "Developed an AI-powered greenhouse using swarm robotics and Google's Vertex AI. The robots record data around the greenhouse using sensors and monitor the environment 24/7. AI is used to analyze the environmental data gathered by the robots to make decisions related to pest control, diseases, and crop yield."
+      description: [
+        "Built an AI-powered greenhouse solution using swarm robotics and Google’s Vertex AI to address 29% global food scarcity due to climate change.",
+        "Engineered a dual-robot system (Raspberry Pi 4 & Pololu 3pi+) for 24/7 autonomous environmental monitoring, capturing numerous plant images and sensor data.",
+        "Implemented Python-based AI models on Google Vertex AI for real-time analysis, enabling autonomous decision-making on pest control, disease management, and crop yield.",
+        "Projected to increase harvesting efficiency by 15-20% and boost crop output by up to 30%, significantly enhancing farming sustainability."
+      ]
     }
   ];
 
@@ -22,7 +31,6 @@ const Projects = () => {
             Projects
           </h2>
         </div>
-        
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div 
@@ -34,7 +42,11 @@ const Projects = () => {
                 <div>
                   <h3 className="text-xl font-medium">{project.title}</h3>
                   <p className="text-sm text-primary mb-3">{project.period}</p>
-                  <p className="text-muted-foreground">{project.description}</p>
+                  <ul className="text-muted-foreground list-disc pl-5 space-y-2">
+                    {project.description.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             </div>

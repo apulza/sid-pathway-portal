@@ -4,40 +4,7 @@ import { useToast } from '@/hooks/use-toast';
 import { Linkedin, Instagram } from 'lucide-react';
 
 const Contact = () => {
-  const formRef = useRef<HTMLFormElement>(null);
-  const [formState, setFormState] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormState(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
-      });
-      
-      setFormState({
-        name: '',
-        email: '',
-        message: ''
-      });
-      
-      setIsSubmitting(false);
-    }, 1500);
-  };
+  // ...existing code...
 
   return (
     <section id="contact">
@@ -126,9 +93,9 @@ const Contact = () => {
           </div>
           
           <div className="appear-on-scroll from-right">
-            <form 
-              ref={formRef} 
-              onSubmit={handleSubmit} 
+            <form
+              action="https://formspree.io/f/mdkwwavr"
+              method="POST"
               className="bg-card/50 p-8 rounded-2xl border border-border/50 shadow-lg backdrop-blur-sm"
             >
               <div className="space-y-6">
@@ -140,14 +107,11 @@ const Contact = () => {
                     type="text"
                     id="name"
                     name="name"
-                    value={formState.name}
-                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 rounded-lg border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all duration-200"
                     placeholder="John Doe"
                   />
                 </div>
-                
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium mb-2">
                     Your Email
@@ -156,14 +120,11 @@ const Contact = () => {
                     type="email"
                     id="email"
                     name="email"
-                    value={formState.email}
-                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 rounded-lg border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all duration-200"
                     placeholder="john@example.com"
                   />
                 </div>
-                
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium mb-2">
                     Your Message
@@ -171,23 +132,19 @@ const Contact = () => {
                   <textarea
                     id="message"
                     name="message"
-                    value={formState.message}
-                    onChange={handleChange}
                     required
                     rows={5}
                     className="w-full px-4 py-3 rounded-lg border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all duration-200 resize-none"
                     placeholder="Hello, I'd like to chat about..."
                   />
                 </div>
-                
                 <button
                   type="submit"
-                  disabled={isSubmitting}
                   className="w-full py-3 bg-primary text-white font-medium rounded-lg 
                     shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 
-                    transition-all duration-300 hover:-translate-y-1 disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+                    transition-all duration-300 hover:-translate-y-1"
                 >
-                  {isSubmitting ? "Sending..." : "Send Message"}
+                  Send Message
                 </button>
               </div>
             </form>

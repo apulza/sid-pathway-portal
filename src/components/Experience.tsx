@@ -4,10 +4,14 @@ import React from 'react';
 const Experience = () => {
   const experiences = [
     {
-      title: "Resident Assistant",
+      title: "Resident Assistant - Engineering LLC",
       company: "Northeastern University Housing and Residential Life",
       location: "Boston, MA",
-      period: "Aug 2025 – Present"
+      period: "Aug 2025 – Present",
+      description: [
+        "Support a community of 50+ residents, fostering a safe and inclusive living environment through conflict management, policy enforcement, and individualized support.",
+        "Planning and facilitating 7+ educational and social programs per semester, leading to a 25% increase in resident engagement and stronger community connections."
+      ]
     },
     {
       title: "Coding Instructor",
@@ -21,7 +25,7 @@ const Experience = () => {
       ]
     },
     {
-      title: "AI Research Assistant",
+      title: "AI/ML Research Assistant",
       company: "Northeastern University AI Perception Lab",
       location: "Boston, MA",
       period: "Jan 2025 – Apr 2025",
@@ -37,16 +41,8 @@ const Experience = () => {
       location: "Boston, MA",
       period: "Aug 2024 – Dec 2024",
       description: [
-        "Fostered a deeper understanding of complex mathematical concepts and provided constructive feedback to students to enhance their learning experience in MATH 1341 (Calculus 1 for Science and Engineering)."
-      ]
-    },
-    {
-      title: "Cashier and Service Clerk",
-      company: "Big Y Foods, Inc.",
-      location: "Rocky Hill, CT",
-      period: "Aug 2023 – Aug 2025",
-      description: [
-        "Provided excellent customer service, efficiently processed transactions, managed cart retrieval, maintained a clean and organized workplace, and contributed to a positive and safe shopping experience."
+        "Provided constructive feedback to 70+ students by grading quizzes/exams to enhance their learning experience in MATH 1341 (Calculus 1 for Science and Engineering).",
+        "Fostered a deeper understanding of complex mathematical concepts and improved problem-solving skills by 10%."
       ]
     }
   ];
@@ -81,9 +77,12 @@ const Experience = () => {
                 
                 {/* Content */}
                 <div className={`md:pr-10 md:text-right ${index % 2 === 1 ? 'md:col-start-1 md:col-end-2' : 'md:col-start-2 md:text-left md:pl-10'}`}>
-                  <div className="pl-12 md:pl-0">
-                    <h3 className="text-xl font-medium">{exp.title}</h3>
-                    <p className="text-primary font-medium">{exp.company}</p>
+                  <div className={
+                    index === 2 ? "pl-2 md:pl-0" :
+                    index % 2 === 0 ? "pl-8 md:pl-0" : "pr-8 md:pr-0"
+                  }>
+                    <h3 className="text-xl font-medium whitespace-nowrap">{exp.title}</h3>
+                    <p className="text-primary font-medium max-w-md break-words">{exp.company}</p>
                     <p className="text-sm text-muted-foreground">{exp.location}</p>
                     <p className="text-sm text-muted-foreground mb-2">{exp.period}</p>
                     {exp.description && (
