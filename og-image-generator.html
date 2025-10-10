@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OG Image Generator</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .og-container {
+            width: 1200px;
+            height: 630px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .content {
+            flex: 1;
+            color: white;
+            z-index: 2;
+        }
+        
+        .name {
+            font-size: 72px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        
+        .title {
+            font-size: 36px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .description {
+            font-size: 24px;
+            opacity: 0.8;
+            max-width: 500px;
+            line-height: 1.4;
+        }
+        
+        .photo-container {
+            width: 400px;
+            height: 400px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            z-index: 2;
+        }
+        
+        .photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .background-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+        
+        .shape1 {
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+        }
+        
+        .shape2 {
+            position: absolute;
+            bottom: -150px;
+            left: -150px;
+            width: 400px;
+            height: 400px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="og-container">
+        <div class="background-shapes">
+            <div class="shape1"></div>
+            <div class="shape2"></div>
+        </div>
+        
+        <div class="content">
+            <div class="name">Siddharth Patel</div>
+            <div class="title">Computer Science Student</div>
+            <div class="description">Passionate about AI, creating innovative solutions and exploring new technologies</div>
+        </div>
+        
+        <div class="photo-container">
+            <img src="/siddharth-africa-new.jpg" alt="Siddharth Patel" class="photo">
+        </div>
+    </div>
+</body>
+</html>
