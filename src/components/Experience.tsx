@@ -64,11 +64,8 @@ const Experience = () => {
             {experiences.map((exp, index) => (
               <div 
                 key={index}
-                className="mb-12 relative grid md:grid-cols-2 items-center appear-on-scroll"
-                style={{ 
-                  transitionDelay: `${index * 150}ms`,
-                  marginLeft: index % 2 === 0 ? '0' : 'auto'
-                }}
+                className={`mb-12 relative flex flex-col md:grid md:grid-cols-2 items-center appear-on-scroll`}
+                style={{ transitionDelay: `${index * 150}ms` }}
               >
                 {/* Timeline Dot */}
                 <div className="absolute top-0 left-0 md:left-1/2 w-8 h-8 -ml-4 md:-ml-4 rounded-full bg-background border-2 border-primary flex items-center justify-center">
@@ -79,7 +76,7 @@ const Experience = () => {
                 <div className={`md:pr-10 md:text-right ${index % 2 === 1 ? 'md:col-start-1 md:col-end-2' : 'md:col-start-2 md:text-left md:pl-10'}`}>
                   <div className={
                     index === 2 ? "pl-2 md:pl-0" :
-                    index % 2 === 0 ? "pl-8 md:pl-0" : "pr-8 md:pr-0"
+                    index % 2 === 0 ? "pl-4 md:pl-0" : "pr-4 md:pr-0"
                   }>
                     <h3 className="text-xl font-medium whitespace-nowrap">{exp.title}</h3>
                     <p className="text-primary font-medium max-w-md break-words">{exp.company}</p>
