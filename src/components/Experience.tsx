@@ -4,13 +4,31 @@ import React from 'react';
 const Experience = () => {
   const experiences = [
     {
+      title: "Incoming Software Engineer Intern",
+      company: "Travelers",
+      location: "Hartford",
+      period: "Jun 2026 – Aug 2026",
+      description: [
+        
+      ]
+    },
+    {
+      title: "Software Engineer Co-op",
+      company: "Waterside Group",
+      location: "Boston, MA",
+      period: "Jan 2026 – May 2026",
+      description: [
+        
+      ]
+    },
+    {
       title: "Resident Assistant - Engineering LLC",
       company: "Northeastern University Housing and Residential Life",
       location: "Boston, MA",
       period: "Aug 2025 – Present",
       description: [
         "Support a community of 50+ residents, fostering a safe and inclusive living environment through conflict management, policy enforcement, and individualized support.",
-        "Planning and facilitating 7+ educational and social programs per semester, leading to a 25% increase in resident engagement and stronger community connections."
+        "Planning and facilitating 7+ educational and social programs per semester, leading to an increase in resident engagement and stronger community connections."
       ]
     },
     {
@@ -42,7 +60,7 @@ const Experience = () => {
       period: "Aug 2024 – Dec 2024",
       description: [
         "Provided constructive feedback to 70+ students by grading quizzes/exams to enhance their learning experience in MATH 1341 (Calculus 1 for Science and Engineering).",
-        "Fostered a deeper understanding of complex mathematical concepts and improved problem-solving skills by 10%."
+        "Fostered a deeper understanding of complex mathematical concepts and improved problem-solving skills."
       ]
     }
   ];
