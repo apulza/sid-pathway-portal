@@ -1,9 +1,11 @@
+import { Github } from "lucide-react";
 
 const Projects = () => {
   const projects = [
     {
-      title: "Problem Reporting and Solution Tracking App",
+      title: "Prism: Problem Reporting and Solution Tracking App",
       period: "Feb 2025 - Mar 2025",
+      github: "https://github.com/apulza/Prism",
       description: [
         "Developed an AI-powered community engagement platform in Python that increased resident-leader communication by an estimated 25%, bridging critical gaps in civic participation.",
         "Implemented AI/NLP features (sentiment analysis & keyword extraction) using TensorFlow to analyze hundreds of problem reports, identifying top community concerns with 90%+ accuracy.",
@@ -13,6 +15,7 @@ const Projects = () => {
     {
       title: "Swarmscape",
       period: "Jan 2025 - Apr 2025",
+      github: "https://github.com/apulza/SwarmScape",
       description: [
         "Built an AI-powered greenhouse solution using swarm robotics and Google’s Vertex AI to address 29% global food scarcity due to climate change.",
         "Engineered a dual-robot system (Raspberry Pi 4 & Pololu 3pi+) for 24/7 autonomous environmental monitoring, capturing numerous plant images and sensor data.",
@@ -23,6 +26,7 @@ const Projects = () => {
     {
       title: "Cryptocurrency Analysis",
       period: "Sep 2025 - Dec 2025",
+      github: "https://github.com/apulza/Cryptocurrency-Analysis",
       description: [
         "Analyzed cryptocurrency price volatility across 3,376 coins using market capitalization and trading volume data from the CoinMarketCap API.",
         "Built and evaluated regression-based ML models (linear, polynomial, interaction terms) using NumPy and scikit-learn to assess predictability of crypto volatility.",
@@ -33,6 +37,7 @@ const Projects = () => {
     {
       title: "NFL Injury Database",
       period: "Nov 2025 - Dec 2025",
+      github: "https://github.com/apulza/NFL-Injury-Database",
       description: [
         "Built a comprehensive MySQL database analyzing 3,440+ NFL injury reports across the 2024 regular season, integrating weekly injury data, player rosters, team performance, and game outcomes to uncover injury trends and performance impacts.",
         "Designed a scalable relational schema (players, teams, games, injuries) supporting mid-season trades and multi-season expansion, with strict foreign key constraints and composite keys.",
@@ -59,15 +64,28 @@ const Projects = () => {
               style={{ transitionDelay: `${index * 150}ms` }}
             >
               <div className="bg-card hover:shadow-lg hover:-translate-y-1 transition-all duration-300 rounded-xl p-6 h-full border border-border/50">
-                <div>
-                  <h3 className="text-xl font-medium">{project.title}</h3>
-                  <p className="text-sm text-primary mb-3">{project.period}</p>
-                  <ul className="text-muted-foreground list-disc pl-5 space-y-2">
-                    {project.description.map((item, i) => (
-                      <li key={i}>{item}</li>
-                    ))}
-                  </ul>
+                <div className="flex justify-between items-start">
+                  <div className="pr-4">
+                    <h3 className="text-xl font-medium">{project.title}</h3>
+                    <p className="text-sm text-primary mb-3">{project.period}</p>
+                  </div>
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Open ${project.title} on GitHub`}
+                      className="ml-2 text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      <Github size={18} />
+                    </a>
+                  )}
                 </div>
+                <ul className="text-muted-foreground list-disc pl-5 space-y-2">
+                  {project.description.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
               </div>
             </div>
           ))}
