@@ -6,7 +6,7 @@ const Experience = () => {
     {
       title: "Incoming Software Engineer Intern",
       company: "Travelers",
-      location: "Hartford",
+      location: "Hartford, CT",
       period: "Jun 2026 – Aug 2026",
       description: [
         
