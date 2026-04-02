@@ -4,12 +4,12 @@ import { useEffect, useState } from 'react';
 
 const Hero = () => {
   const phrases = [
-  "Hi, I'm Sid Patel",
-  "Innovative",
-  "Creative",
-  "Passionate",
-  "Problem-solver",
-  "Detail-oriented"
+  "Hi, I'm Sid Patel!",
+  "Innovative.",
+  "Creative.",
+  "Passionate.",
+  "Problem-solver.",
+  "Detail-oriented."
   ];
   const [currentPhrase, setCurrentPhrase] = useState(0);
   const [displayedText, setDisplayedText] = useState("");

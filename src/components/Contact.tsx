@@ -14,7 +14,7 @@ const Contact = () => {
             <h4 className="text-primary font-medium mb-2">Get In Touch</h4>
             <h2 className="section-heading mb-6">Let's Connect</h2>
             <p className="text-muted-foreground mb-8 max-w-lg">
-              I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+              I'm always open to discussing new projects, creative ideas, or new opportunities.
             </p>
             
             <div className="space-y-6">
@@ -59,23 +59,6 @@ const Contact = () => {
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
                     linkedin.com/in/siddharth-patel
-                  </a>
-                </div>
-              </div>
-              
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full">
-                  <Instagram className="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <h4 className="text-sm font-medium">Instagram</h4>
-                  <a 
-                    href="https://www.instagram.com/s1dpat3l/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    instagram.com/s1dpat3l
                   </a>
                 </div>
               </div>

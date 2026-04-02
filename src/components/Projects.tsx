@@ -4,7 +4,7 @@ const Projects = () => {
   const projects = [
     {
       title: "Prism: Problem Reporting and Solution Tracking App",
-      period: "Feb 2025 - Mar 2025",
+      
       github: "https://github.com/apulza/Prism",
       description: [
         "Developed an AI-powered community engagement platform in Python that increased resident-leader communication by an estimated 25%, bridging critical gaps in civic participation.",
@@ -14,7 +14,7 @@ const Projects = () => {
     },
     {
       title: "Swarmscape",
-      period: "Jan 2025 - Apr 2025",
+      
       github: "https://github.com/apulza/SwarmScape",
       description: [
         "Built an AI-powered greenhouse solution using swarm robotics and Google’s Vertex AI to address 29% global food scarcity due to climate change.",
@@ -25,7 +25,7 @@ const Projects = () => {
     },
     {
       title: "Cryptocurrency Analysis",
-      period: "Sep 2025 - Dec 2025",
+      
       github: "https://github.com/apulza/Cryptocurrency-Analysis",
       description: [
         "Analyzed cryptocurrency price volatility across 3,376 coins using market capitalization and trading volume data from the CoinMarketCap API.",
@@ -36,7 +36,7 @@ const Projects = () => {
     },
     {
       title: "NFL Injury Database",
-      period: "Nov 2025 - Dec 2025",
+      
       github: "https://github.com/apulza/NFL-Injury-Database",
       description: [
         "Built a comprehensive MySQL database analyzing 3,440+ NFL injury reports across the 2024 regular season, integrating weekly injury data, player rosters, team performance, and game outcomes to uncover injury trends and performance impacts.",
@@ -75,15 +75,18 @@ const Projects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`Open ${project.title} on GitHub`}
-                      className="ml-2 text-muted-foreground hover:text-primary transition-colors"
+                      className="ml-2 text-primary hover:text-primary transition-colors"
                     >
                       <Github size={18} />
                     </a>
                   )}
                 </div>
-                <ul className="text-muted-foreground list-disc pl-5 space-y-2">
+                <ul className="text-muted-foreground space-y-2 list-none">
                   {project.description.map((item, i) => (
-                    <li key={i}>{item}</li>
+                    <li key={i} className="relative pl-6">
+                      <span className="absolute left-0 top-1.5 w-2 h-2 bg-primary rounded-full" />
+                      <span>{item}</span>
+                    </li>
                   ))}
                 </ul>
               </div>

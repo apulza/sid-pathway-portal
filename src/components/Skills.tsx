@@ -4,11 +4,12 @@ const Skills = () => {
   const skills = [
     {
       category: "Programming Languages",
-      items: ["Java", "JavaScript", "Python", "C", "C++", "HTML/CSS", "SQL", "Racket"]
+      items: ["Python", "Java", "JavaScript", "TypeScript", "SQL", "C++", "C#", "HTML/CSS"]
     },
     {
       category: "Tools & Applications",
-      items: ["Git", "Github", "Google Colab", "Jupyter Notebook", "IntelliJ", "Eclipse", "VS-Code", "Linux", "LaTeX"]
+      items: ["Git", "GitHub", "Supabase", "PostgreSQL", "MySQL", "AWS", "Figma", "Linux",
+              "LaTeX", "VS-Code", "Claude Code", "Cursor", "IntelliJ", "Google Colab", "Jupyter Notebook"]
     }
   ];
 
@@ -33,7 +34,7 @@ const Skills = () => {
                 <h3 className="text-lg font-medium mb-4 pb-2 border-b border-border/40">
                   {skillSet.category}
                 </h3>
-                <ul className="space-y-2">
+                <ul className={skillSet.category === "Tools & Applications" ? "grid grid-cols-2 gap-x-6 gap-y-2" : "space-y-2"}>
                   {skillSet.items.map(skill => (
                     <li key={skill} className="flex items-center gap-2">
                       <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>

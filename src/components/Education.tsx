@@ -48,7 +48,7 @@ const Education = () => {
                       Activities and Societies
                     </h4>
                     <p className="ml-4 text-muted-foreground">
-                      Northeastern AI Club, InnovAIte Hackathon
+                      AI Club, Disrupt (Fintech Club), InnovAIte Hackathon
                     </p>
                   </div>
                 </div>
