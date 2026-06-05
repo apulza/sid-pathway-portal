@@ -4,7 +4,7 @@ import React from 'react';
 const Experience = () => {
   const experiences = [
     {
-      title: "Incoming Software Engineer Intern",
+      title: "Software Engineer Intern",
       company: "Travelers",
       location: "Hartford, CT",
       period: "Jun 2026 – Aug 2026",
