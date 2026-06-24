@@ -9,7 +9,7 @@ const Experience = () => {
       location: "Hartford, CT",
       period: "Jun 2026 – Aug 2026",
       description: [
-        
+        "Claim Technology - Analytics Value Stream"
       ]
     },
     {
@@ -18,7 +18,7 @@ const Experience = () => {
       location: "Boston, MA",
       period: "Jan 2026 – May 2026",
       description: [
-        
+        "Web & App Development"
       ]
     },
     {
